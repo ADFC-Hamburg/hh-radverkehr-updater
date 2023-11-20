@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 RUN apt update
 RUN apt dist-upgrade --yes
 RUN apt install git --yes
-RUN mkdir -p /src/hh-radverkehr
+RUN mkdir -p /src/hh-radverkehr ~/.ssh
 RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 COPY run.sh /srv
 RUN chmod 755 /srv/run.sh
